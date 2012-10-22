@@ -16,6 +16,11 @@
  */
 @property(nonatomic,retain)NSData *update;
 
-+(UpdateEvent*)buildUpdateEvent:(NSData*)notifyData;
+/**
+ * indicates whether the update was sent over UDP
+ */
+@property Boolean isUDP;
+
++(UpdateEvent*)buildUpdateEvent:(NSData*)notifyData :(Boolean)udp;
 
 @end

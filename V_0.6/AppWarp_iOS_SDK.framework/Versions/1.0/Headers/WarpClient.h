@@ -179,6 +179,13 @@
 
 -(void)sendUpdatePeers:(NSData*)update;
 
+/**
+ * sends a custom update message to room in which the user is currently joined. The 
+ * update is sent using UDP protocol and is unreliable.
+ * @param update
+ */
+
+-(void)sendUdpUpdatePeers:(NSData*)update;
 
 /**
  * add your listener object on which callbacks will be invoked when

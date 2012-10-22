@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AsyncUdpSocket.h"
 
 @interface ClientChannel : NSObject<NSStreamDelegate>{
+    AsyncUdpSocket *udpSocket;
 }
 @property (nonatomic, retain) NSInputStream *inputStream;
 @property (nonatomic, retain) NSOutputStream *outputStream;
@@ -18,6 +20,7 @@
 - (void)initNetworkCommunication;
 
 - (void)sendData:(NSData*)data;
+- (void)sendUdpData:(NSData*)data;
 -(void)disconnect;
 
 @end
