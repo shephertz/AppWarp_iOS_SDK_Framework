@@ -45,13 +45,23 @@
 -(IBAction)lobbyButtonClicked:(id)sender{
     NSLog(@"lobbyButtonClicked");
     [usernameTextField resignFirstResponder];
-    [[WarpClient getInstance]joinLobby];
+    if ([[WarpClient getInstance] getConnectionState] == AUTHENTICATED) {
+        [[WarpClient getInstance]joinLobby];
+    }
+    else{
+        NSLog(@"please join zone first");
+    }
     
 }
 -(IBAction)chatButtonClicked:(id)sender{
     NSLog(@"chat button clicked");
     [usernameTextField resignFirstResponder];
-    [[WarpClient getInstance]sendChat:@"hello world"];
+    if ([[WarpClient getInstance] getConnectionState] == AUTHENTICATED) {
+        [[WarpClient getInstance]sendChat:@"hello world"];
+    }
+    else{
+        NSLog(@"please join zone first");
+    }
 }
 
 -(IBAction)roomCallsClicked:(id)sender{
@@ -70,7 +80,7 @@
     [usernameTextField resignFirstResponder];
     
     // Please replace with the API and Secret key pair received after registering
-    [WarpClient initWarp:@"" secretKey:@""];
+    [WarpClient initWarp:@"50b2fe59bacf43c33664420119be049b911ef8e956cffc6c26e44e76941c0ebc" secretKey:@"a596c3a06641cd3d847d9f379e382d16bff792d44563d63ddab9baab9317d2c3"];
     
     WarpClient *warpClient = [WarpClient getInstance];
     [warpClient addConnectionRequestListener:self];
