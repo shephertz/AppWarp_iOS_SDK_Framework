@@ -67,7 +67,7 @@
 -(IBAction)roomCallsClicked:(id)sender{
     [usernameTextField resignFirstResponder];
     if ([[WarpClient getInstance] getConnectionState] == AUTHENTICATED) {
-        [[WarpClient getInstance]createRoomWithRoomName:usernameTextField.text roomOwner:@"Shephertz" maxUsers:3];
+        [[WarpClient getInstance]getAllRooms];
     }
     else {
         NSLog(@"please join zone first");
