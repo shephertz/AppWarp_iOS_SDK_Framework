@@ -80,7 +80,7 @@
     [usernameTextField resignFirstResponder];
     
     // Please replace with the API and Secret key pair received after registering
-    [WarpClient initWarp:@"50b2fe59bacf43c33664420119be049b911ef8e956cffc6c26e44e76941c0ebc" secretKey:@"a596c3a06641cd3d847d9f379e382d16bff792d44563d63ddab9baab9317d2c3"];
+    [WarpClient initWarp:@"" secretKey:@""];
     
     WarpClient *warpClient = [WarpClient getInstance];
     [warpClient addConnectionRequestListener:self];
