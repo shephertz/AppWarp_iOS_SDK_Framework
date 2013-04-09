@@ -7,6 +7,7 @@ AppWarp Framework file for iOS
 
 [Reference](https://github.com/shephertz/AppWarp_iOS_SDK_Framework/wiki/Reference)
 
+[FAQ](https://github.com/shephertz/AppWarp_JAVA_SDK_JAR/wiki/FAQ)
 
 Sample
 ========
