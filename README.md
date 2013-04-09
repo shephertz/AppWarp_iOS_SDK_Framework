@@ -3,6 +3,11 @@ AppWarp_iOS_SDK_Framework
 
 AppWarp Framework file for iOS
 
+[Getting Started](https://github.com/shephertz/AppWarp_iOS_SDK_Framework/wiki/Getting-Started)
+
+[Reference](https://github.com/shephertz/AppWarp_iOS_SDK_Framework/wiki/Reference)
+
+
 Sample
 ========
 
