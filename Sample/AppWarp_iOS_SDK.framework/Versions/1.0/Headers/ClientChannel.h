@@ -8,19 +8,28 @@
 
 #import <Foundation/Foundation.h>
 #import "AsyncUdpSocket.h"
-
-@interface ClientChannel : NSObject<NSStreamDelegate>{
-    AsyncUdpSocket *udpSocket;
+@class KeepAliveTask;
+@interface ClientChannel : NSObject<NSStreamDelegate>
+{
+    AsyncUdpSocket  *udpSocket;
+    NSInputStream   *inputStream;
+    NSOutputStream  *outputStream;
+    NSTimer         *keepAliveTimer;
+    KeepAliveTask   *keepAliveTask;
+    
 }
-@property (nonatomic, retain) NSInputStream *inputStream;
-@property (nonatomic, retain) NSOutputStream *outputStream;
-@property (nonatomic, retain) NSMutableArray *list;
-@property (nonatomic, retain) NSMutableData *incompleteData;
-@property (nonatomic, assign) BOOL waitingForData;
+@property (nonatomic, retain) KeepAliveTask     *keepAliveTask;
+@property (nonatomic, retain) NSMutableArray    *list;
+@property (nonatomic, retain) NSMutableData     *incompleteData;
+@property (nonatomic, assign) BOOL              waitingForData;
+@property (nonatomic, retain) NSString          *warpServerHost;
+@property (nonatomic, assign) int               sessionId;
+
 - (void)initNetworkCommunication;
 
 - (void)sendData:(NSData*)data;
 - (void)sendUdpData:(NSData*)data;
--(void)disconnect;
-
+- (void)disconnect;
+- (void)startKeepAlives;
+- (void)invalidateKeepAliveTimer;
 @end

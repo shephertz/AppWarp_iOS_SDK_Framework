@@ -13,6 +13,8 @@
 #import "NotificationListener.h"
 #import "LobbyListener.h"
 
+
+
 @interface TestClassViewController ()
 
 @end
@@ -95,30 +97,22 @@
     LobbyListener *lobbyListener = [[LobbyListener alloc]initWithViewController:self];
     [warpClient addLobbyRequestListener:lobbyListener];
     
-    [warpClient connect];
+    [warpClient connectWithUserName:usernameTextField.text];
 }
 
 -(void)onConnectDone:(ConnectEvent*) event{
-    if (event.result==0) {
+    if (event.result==0)
+    {
         resultLabel.text = @"Connection Done";
         NSLog(@"userNameTextField.text = %@",usernameTextField.text);
-        [[WarpClient getInstance]joinZone:usernameTextField.text];
+        
     }
-    else {
+    else
+    {
         NSLog(@"connection failed");
     }
 }
 
--(void)onJoinZoneDone:(ConnectEvent*) event{
-    if (event.result==0) {
-        resultLabel.text = @"Join Zone Done";
-        NSLog(@"Join Zone done");
-        
-    }
-    else {
-        NSLog(@"Join Zone failed");
-    }
-}
 
 
 -(void)onDisconnectDone:(ConnectEvent*) event{

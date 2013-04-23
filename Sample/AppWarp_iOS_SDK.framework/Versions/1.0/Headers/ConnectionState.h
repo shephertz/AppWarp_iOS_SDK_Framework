@@ -12,6 +12,6 @@
 static const int CONNECTED = 0;
 static const int AUTHENTICATED = 1;
 static const int DISCONNECTED = 2;
-
+static const int CONNECTING = 3;
 
 #endif

@@ -11,14 +11,15 @@
 #import "WarpResponse.h"
 #import "WarpNotifyMessage.h"
 
-@interface WarpClient : NSObject{
+@interface WarpClient : NSObject<NSURLConnectionDelegate>{
     
 }
 
 @property(nonatomic,retain)ClientChannel *clientChannelRef;
 @property(nonatomic,retain)NSString *apiKey;
 @property(nonatomic,retain)NSString *secretKey;
-
+@property(nonatomic,retain)NSString *userName;
+@property(nonatomic,retain)NSString *warpServerHost;
 
 
 /**
@@ -36,20 +37,16 @@
  * @param pvtKey
  * @return 
  */
-+(void)initWarp:(NSString*)apiKey secretKey:(NSString*)secretKey;
++(BOOL)initWarp:(NSString*)apiKey secretKey:(NSString*)secretKey;
+
 /**
- * sends an authentication request to the WARP server with the given
- * username string. This name must be unique amongst all users connected
- * to the server at a given moment. Result is provided in the onAuthenticationDone
- * callback of the ConnectionListener.
+ * Sends connection as well as authentication request to the WARP server 
+ * with the given username string. The result of the operation
+ * is provided in the onConnectDone callback of the ConnectionListener.
  * @param user
  */
--(void)joinZone:(NSString*)userName;
-/**
- * Initiates your connection with the WARP server. The result of the operation
- * is provided in the onConnectDone callback of the ConnectionListener.
- */
--(void)connect;
+-(void)connectWithUserName:(NSString*)userName;
+
 /**
  * Disconnects the connection with the WARP server. The result for
  * this request will be provided in the onDisconnectDone callback of the
@@ -96,7 +93,7 @@
 -(void)setCustomUserData:(NSString*)username customData:(NSString*)customData;
 /**
  * Retrieves usernames of all the users connected to the server. Result is
- * provided in the onGetOnlineUsers callback of the ZoneListener.
+ * provided in the onGetOnlineUsersDone callback of the ZoneListener.
  */
 -(void)getOnlineUsers;
 /**
@@ -106,7 +103,7 @@
 -(void)getAllRooms;
 /**
  * Retrieves live information of the user from the server. Result is
- * provided in the onGetLiveUserInfo callback of the ZoneListener.
+ * provided in the onGetLiveUserInfoDone callback of the ZoneListener.
  * @param username
  */
 -(void)getLiveUserInfo:(NSString*)username;

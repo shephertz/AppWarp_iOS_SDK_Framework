@@ -17,11 +17,7 @@
  * @param event
  */
 -(void)onConnectDone:(ConnectEvent*) event;
-/**
- * Invoked in response to a authentication request.
- * @param event
- */
--(void)onJoinZoneDone:(ConnectEvent*) event;
+
 /**
  * Invoked in response to a disconnect request.
  * @param event

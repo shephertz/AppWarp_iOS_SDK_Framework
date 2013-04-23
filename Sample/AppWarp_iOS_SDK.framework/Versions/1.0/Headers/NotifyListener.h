@@ -18,12 +18,12 @@
  * Invoked when a room is created. Lobby subscribers will receive this.
  * @param event
  */
--(void)onRoomCreated:(RoomData*)roomEvent;
+-(void)onRoomCreated:(RoomData*)roomData;
 /**
  * Invoked when a room is deleted. Lobby subscribers will receive this.
  * @param event
  */
--(void)onRoomDestroyed:(RoomData*)roomEvent;
+-(void)onRoomDestroyed:(RoomData*)roomData;
 /**
  * Invoked when a user leaves a room. Lobby and the concerned room subscribers 
  * will receive this.
