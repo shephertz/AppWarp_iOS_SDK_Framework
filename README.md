@@ -1,5 +1,7 @@
-AppWarp_iOS_SDK_Framework
-=========================
+AppWarp iOS SDK
+======================
+
+[![OverView](http://appwarp.shephertz.com/images/appwarp_logo.png)](http://appwarp.shephertz.com)
 
 AppWarp Framework file for iOS
 
@@ -17,3 +19,5 @@ framework. It illustrates very basic connection/joining zone APIs as well as Lob
 
 Please update the call to WarpClient initialize with the Api and Secret Key pair you
 received when registering.
+
+[![](http://blogs.shephertz.com/wp-content/uploads/2013/05/Signup.jpg)](https://apphq.shephertz.com/register?appwarp=true)[![](http://blogs.shephertz.com/wp-content/uploads/2013/05/AlreadyRegistered.jpg)](https://apphq.shephertz.com/)
