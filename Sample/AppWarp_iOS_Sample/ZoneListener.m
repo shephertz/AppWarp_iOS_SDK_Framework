@@ -40,8 +40,8 @@
         RoomData *roomData = roomEvent.roomData;
         NSLog(@"roomEvent result = %i",roomEvent.result);
         NSLog(@"room id = %@",roomData.roomId);
-        //[helper setRoomId:roomData.roomId];
-        [[WarpClient getInstance] joinRoom:roomData.roomId];
+        [helper setRoomId:roomData.roomId];
+        //[[WarpClient getInstance] joinRoom:roomData.roomId];
         [[helper delegate] updateResponseLabel:[NSString stringWithFormat:@"Success....roomId=%@",roomData.roomId]];
     }
     else
