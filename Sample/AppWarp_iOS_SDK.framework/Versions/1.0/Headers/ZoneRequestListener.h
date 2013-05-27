@@ -11,6 +11,7 @@
 #import "AllRoomsEvent.h"
 #import "LiveUserInfoEvent.h"
 #import "AllUsersEvent.h"
+#import "MatchedRoomsEvent.h"
 
 @protocol ZoneRequestListener <NSObject>
 
@@ -46,4 +47,9 @@
  */
 -(void)onSetCustomUserDataDone:(LiveUserInfoEvent*)event;
 
+/**
+ * Invoked in response to a getMatchMaking Rooms request.
+ * @param event
+ */
+-(void)onGetMatchedRoomsDone:(MatchedRoomsEvent*)event;
 @end

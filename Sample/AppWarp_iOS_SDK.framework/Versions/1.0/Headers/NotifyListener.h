@@ -61,5 +61,11 @@
  * @param event
  */
 -(void)onUpdatePeersReceived:(UpdateEvent*)updateEvent;
-
+/**
+ * Invoked when a user change room property. Lobby and the concerned room subscribers
+ * will receive this.
+ * @param event
+ * @param username
+ */
+-(void)onUserChangeRoomProperty:(RoomData*)event username:(NSString*)username properties:(NSDictionary*)properties;
 @end

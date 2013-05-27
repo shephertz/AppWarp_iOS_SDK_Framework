@@ -22,6 +22,11 @@
 @property (nonatomic, retain) NSString* customData;
 
 /**
+ * Gives the properties associated with the room.
+ */
+@property (nonatomic, retain) NSDictionary* properties;
+
+/**
  * Gives the result code 
  */
 @property Byte result;

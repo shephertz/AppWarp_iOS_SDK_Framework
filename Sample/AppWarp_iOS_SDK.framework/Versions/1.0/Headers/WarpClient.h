@@ -39,6 +39,7 @@
  */
 +(BOOL)initWarp:(NSString*)apiKey secretKey:(NSString*)secretKey;
 
++(BOOL)initWarp:(NSString*)apiKey secretKey:(NSString*)secretKey hostAddress:(NSString*)hostAddress;
 /**
  * Sends connection as well as authentication request to the WARP server 
  * with the given username string. The result of the operation
@@ -68,9 +69,21 @@
  * in the onUnSubscribeLobbyDone callback of the LobbyListener.
  * @param name
  * @param owner
+ * @param properties
  * @param maxUsers
  */
--(void)createRoomWithRoomName:(NSString*)roomName roomOwner:(NSString*)roomOwner maxUsers:(int)maxUsers;
+-(void)createRoomWithRoomName:(NSString*)roomName roomOwner:(NSString*)roomOwner properties:(NSDictionary*)properties maxUsers:(int)maxUsers;
+
+/**
+ * Sends a update room properties request to the server. Result of the request is provided
+ * in the onUpdatePropertyDone callback of the LobbyListener.
+ * @param name
+ * @param owner
+ * @param properties
+ * @param maxUsers
+ */
+
+-(void)updateRoom:(NSString *)roomID  addProperties:(NSDictionary*)propertiesDict removeProperties:(NSArray*)propertiesKeyArray;
 /**
  * sends a delete room request to the server. Result of the request is provided
  * in the onDeleteRoomDone callback of the ZoneListener.
@@ -101,6 +114,20 @@
  * provided in the onGetAllRoomsDone callback of the ZoneListener.
  */
 -(void)getAllRooms;
+/**
+ * Retrieves information of the room that contain n user in it from the server. Result is
+ * provided in the onGetMatchedRoomsDone callback of the ZoneListener.
+ * @param roomid
+ */
+-(void)getRoomWithNUser:(int) userCount;
+/**
+ * Retrieves information of the room that contain specific
+ * properties from the server. Result is
+ * provided in the onGetMatchedRoomsDone callback of the ZoneListener.
+ * @param roomid
+ */
+-(void)getRoomWithProperties:(NSDictionary*) properties;
+
 /**
  * Retrieves live information of the user from the server. Result is
  * provided in the onGetLiveUserInfoDone callback of the ZoneListener.
@@ -144,6 +171,14 @@
  * @param roomId
  */
 -(void)joinRoom:(NSString*)roomId;
+
+/**Match making
+ * sends a join room request to the server. if user want to join a room with n user
+ * Result of the request is provided
+ * in the onJoinRoomDone callback of the RoomListener.
+ * @param userCount
+ */
+-(void)joinRoomWithNUser:(int) userCount;
 /**
  * sends a leave room request to the server. Result of the request is provided
  * in the onLeaveRoomDone callback of the RoomListener.

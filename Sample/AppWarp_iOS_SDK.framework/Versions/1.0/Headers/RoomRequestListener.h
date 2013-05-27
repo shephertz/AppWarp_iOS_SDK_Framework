@@ -43,4 +43,9 @@
  * @param event
  */
 -(void)onSetCustomRoomDataDone:(LiveRoomInfoEvent*)event;
+/**
+ * Invoked in response to a updateRoomProperties request.
+ * @param event
+ */
+-(void)onUpdatePropertyDone:(LiveRoomInfoEvent*)event;
 @end
