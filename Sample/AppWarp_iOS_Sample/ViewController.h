@@ -28,6 +28,10 @@
     
 }
 
+@property(nonatomic,retain) NSString *roomId;
+
+
+-(void)initializeAppWarp;
 -(void)updateResponseLabel:(NSString*)responseString;
 
 -(IBAction)connectButtonAction:(id)sender;

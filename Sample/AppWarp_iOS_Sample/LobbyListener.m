@@ -7,6 +7,7 @@
 //
 
 #import "LobbyListener.h"
+#import "ViewController.h"
 
 @implementation LobbyListener
 @synthesize helper;
@@ -36,12 +37,12 @@
     NSLog(@"%s",__FUNCTION__);
     if (lobbyEvent.result == SUCCESS)
     {
-        [[helper delegate] updateResponseLabel:@"Joined Lobby"];
+        [helper updateResponseLabel:@"Joined Lobby"];
         
     }
     else
     {
-        [[helper delegate] updateResponseLabel:[NSString stringWithFormat:@"Error Code = %d",lobbyEvent.result]];
+        [helper updateResponseLabel:[NSString stringWithFormat:@"Error Code = %d",lobbyEvent.result]];
     }
 
 }
@@ -53,12 +54,12 @@
 {
     if (lobbyEvent.result == SUCCESS)
     {
-        [[helper delegate] updateResponseLabel:@"Subscribed Lobby"];
+        [helper updateResponseLabel:@"Subscribed Lobby"];
         
     }
     else
     {
-        [[helper delegate] updateResponseLabel:[NSString stringWithFormat:@"Error Code = %d",lobbyEvent.result]];
+        [helper updateResponseLabel:[NSString stringWithFormat:@"Error Code = %d",lobbyEvent.result]];
     }
 }
 -(void)onUnSubscribeLobbyDone:(LobbyEvent*)lobbyEvent

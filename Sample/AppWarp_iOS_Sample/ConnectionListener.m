@@ -7,7 +7,7 @@
 //
 
 #import "ConnectionListener.h"
-
+#import "ViewController.h"
 
 @implementation ConnectionListener
 @synthesize helper;
@@ -32,14 +32,14 @@
 
 -(void)onConnectDone:(ConnectEvent*) event
 {
-    NSLog(@"%s...name=%@...%d",__FUNCTION__,[helper userName],event.result);
+    NSLog(@"%s......%d",__FUNCTION__,event.result);
     if (event.result==SUCCESS)
     {
-        [[helper delegate] updateResponseLabel:@"Connection Done"];
+        [helper updateResponseLabel:@"Connection Done"];
     }
     else
     {
-        [[helper delegate] updateResponseLabel:[NSString stringWithFormat:@"Connection Failed with error code = %d",event.result]];
+        [helper updateResponseLabel:[NSString stringWithFormat:@"Connection Failed with error code = %d",event.result]];
         NSLog(@"connection failed");
         
     }
@@ -52,11 +52,11 @@
     
     if (event.result==SUCCESS)
     {
-        [[helper delegate] updateResponseLabel:@"Connection Dismissed"];
+        [helper updateResponseLabel:@"Connection Dismissed"];
     }
     else
     {
-        [[helper delegate] updateResponseLabel:[NSString stringWithFormat:@"Error code = %d",event.result]];
+        [helper updateResponseLabel:[NSString stringWithFormat:@"Error code = %d",event.result]];
     }
 }
 

@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AppWarpHelper.h"
 #import <AppWarp_iOS_SDK/AppWarp_iOS_SDK.h>
 
 @interface RoomListener : NSObject <RoomRequestListener>

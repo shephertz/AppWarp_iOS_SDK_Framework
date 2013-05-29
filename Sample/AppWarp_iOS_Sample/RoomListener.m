@@ -7,6 +7,8 @@
 //
 
 #import "RoomListener.h"
+#import "ViewController.h"
+
 @implementation RoomListener
 
 @synthesize helper;
@@ -36,7 +38,7 @@
     if (roomEvent.result == SUCCESS)
     {
         RoomData *roomData = roomEvent.roomData;
-        [[helper delegate] updateResponseLabel:[NSString stringWithFormat:@"Subscribed Room with roomId = %@",roomData.roomId]];
+        [helper updateResponseLabel:[NSString stringWithFormat:@"Subscribed Room with roomId = %@",roomData.roomId]];
         NSLog(@"onSubscribeRoomDone  SUCCESS");
     }
     else
@@ -64,13 +66,13 @@
     if (roomEvent.result == SUCCESS)
     {
         RoomData *roomData = roomEvent.roomData;
-        [[helper delegate] updateResponseLabel:[NSString stringWithFormat:@"Joined Room with roomId = %@",roomData.roomId]];
+        [helper updateResponseLabel:[NSString stringWithFormat:@"Joined Room with roomId = %@",roomData.roomId]];
         
         NSLog(@".onJoinRoomDone..on Join room listener called Success");
     }
     else
     {
-        [[helper delegate] updateResponseLabel:[NSString stringWithFormat:@"Error Code = %d",roomEvent.result]];
+        [helper updateResponseLabel:[NSString stringWithFormat:@"Error Code = %d",roomEvent.result]];
         NSLog(@".onJoinRoomDone..on Join room listener called failed");
     }
 }

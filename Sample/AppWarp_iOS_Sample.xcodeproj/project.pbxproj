@@ -20,7 +20,6 @@
 		D764CA2A174CD32F00596923 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D764CA28174CD32F00596923 /* ViewController_iPhone.xib */; };
 		D764CA2D174CD32F00596923 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D764CA2B174CD32F00596923 /* ViewController_iPad.xib */; };
 		D764CA34174CD36A00596923 /* AppWarp_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D764CA33174CD36A00596923 /* AppWarp_iOS_SDK.framework */; };
-		D764CA37174CE09200596923 /* AppWarpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D764CA36174CE09200596923 /* AppWarpHelper.m */; };
 		D764CA3E174CE0C100596923 /* RoomListener.m in Sources */ = {isa = PBXBuildFile; fileRef = D764CA39174CE0C100596923 /* RoomListener.m */; };
 		D764CA3F174CE0C100596923 /* NotificationListener.m in Sources */ = {isa = PBXBuildFile; fileRef = D764CA3B174CE0C100596923 /* NotificationListener.m */; };
 		D764CA40174CE0C100596923 /* ConnectionListener.m in Sources */ = {isa = PBXBuildFile; fileRef = D764CA3D174CE0C100596923 /* ConnectionListener.m */; };
@@ -48,8 +47,6 @@
 		D764CA29174CD32F00596923 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		D764CA2C174CD32F00596923 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		D764CA33174CD36A00596923 /* AppWarp_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppWarp_iOS_SDK.framework; sourceTree = "<group>"; };
-		D764CA35174CE09200596923 /* AppWarpHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppWarpHelper.h; sourceTree = "<group>"; };
-		D764CA36174CE09200596923 /* AppWarpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppWarpHelper.m; sourceTree = "<group>"; };
 		D764CA38174CE0C100596923 /* RoomListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomListener.h; sourceTree = "<group>"; };
 		D764CA39174CE0C100596923 /* RoomListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomListener.m; sourceTree = "<group>"; };
 		D764CA3A174CE0C100596923 /* NotificationListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationListener.h; sourceTree = "<group>"; };
@@ -135,8 +132,6 @@
 		D764CA41174CE0D100596923 /* AppWarpHelper */ = {
 			isa = PBXGroup;
 			children = (
-				D764CA35174CE09200596923 /* AppWarpHelper.h */,
-				D764CA36174CE09200596923 /* AppWarpHelper.m */,
 				D764CA38174CE0C100596923 /* RoomListener.h */,
 				D764CA39174CE0C100596923 /* RoomListener.m */,
 				D764CA3A174CE0C100596923 /* NotificationListener.h */,
@@ -243,7 +238,6 @@
 				D764CA1A174CD32E00596923 /* main.m in Sources */,
 				D764CA1E174CD32E00596923 /* AppDelegate.m in Sources */,
 				D764CA27174CD32E00596923 /* ViewController.m in Sources */,
-				D764CA37174CE09200596923 /* AppWarpHelper.m in Sources */,
 				D764CA3E174CE0C100596923 /* RoomListener.m in Sources */,
 				D764CA3F174CE0C100596923 /* NotificationListener.m in Sources */,
 				D764CA40174CE0C100596923 /* ConnectionListener.m in Sources */,

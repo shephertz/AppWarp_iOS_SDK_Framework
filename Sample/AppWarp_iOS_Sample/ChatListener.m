@@ -7,6 +7,7 @@
 //
 
 #import "ChatListener.h"
+#import "ViewController.h"
 
 @implementation ChatListener
 @synthesize helper;
@@ -34,11 +35,11 @@
 {
     if (result==SUCCESS)
     {
-        [[helper delegate] updateResponseLabel:@"Chat Sent."];
+        [helper updateResponseLabel:@"Chat Sent."];
     }
     else
     {
-        [[helper delegate] updateResponseLabel:[NSString stringWithFormat:@"Error Code=%d",result]];
+        [helper updateResponseLabel:[NSString stringWithFormat:@"Error Code=%d",result]];
     }
 }
 @end

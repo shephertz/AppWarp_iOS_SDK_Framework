@@ -7,7 +7,7 @@
 //
 
 #import "ZoneListener.h"
-
+#import "ViewController.h"
 @implementation ZoneListener
 
 @synthesize helper;
@@ -42,11 +42,11 @@
         NSLog(@"room id = %@",roomData.roomId);
         [helper setRoomId:roomData.roomId];
         //[[WarpClient getInstance] joinRoom:roomData.roomId];
-        [[helper delegate] updateResponseLabel:[NSString stringWithFormat:@"Success....roomId=%@",roomData.roomId]];
+        [helper updateResponseLabel:[NSString stringWithFormat:@"Success....roomId=%@",roomData.roomId]];
     }
     else
     {
-        [[helper delegate] updateResponseLabel:[NSString stringWithFormat:@"Create room Failed with error code = %d",roomEvent.result]];
+        [helper updateResponseLabel:[NSString stringWithFormat:@"Create room Failed with error code = %d",roomEvent.result]];
     }
     
 }
@@ -69,7 +69,7 @@
     if (event.result == SUCCESS)
     {
         NSLog(@"%s Rooms=%@",__FUNCTION__,event.roomIds);
-        [[WarpClient getInstance] joinRoom:[event.roomIds objectAtIndex:0]];
+        
     }
     else
     {
