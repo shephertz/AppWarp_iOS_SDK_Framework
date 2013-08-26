@@ -5,19 +5,13 @@ AppWarp iOS SDK
 
 AppWarp Framework file for iOS
 
-[Getting Started](https://github.com/shephertz/AppWarp_iOS_SDK_Framework/wiki/Getting-Started)
-
-[Reference](https://github.com/shephertz/AppWarp_iOS_SDK_Framework/wiki/Reference)
-
-[FAQ](https://github.com/shephertz/AppWarp_JAVA_SDK_JAR/wiki/FAQ)
+[Getting Started](http://appwarp.shephertz.com/game-development-center/ios-game-developers-home/)
 
 Sample
 ========
 
-The given sample shows you how to set up your Xcode project to include the AppWarp 
-framework. It illustrates very basic connection/joining zone APIs as well as Lobby and Chat APIs.
+The given samples shows you how to set up your Xcode project to include the AppWarp 
+framework. It illustrates very basic connection/joining rooms etc. as well as Update and Chat APIs.
 
-Please update the call to WarpClient initialize with the Api and Secret Key pair you
+Please update the call to WarpClient init with the Api and Secret Key pair you
 received when registering.
-
-[![](http://blogs.shephertz.com/wp-content/uploads/2013/05/Signup.jpg)](https://apphq.shephertz.com/register?appwarp=true)[![](http://blogs.shephertz.com/wp-content/uploads/2013/05/AlreadyRegistered.jpg)](https://apphq.shephertz.com/)
