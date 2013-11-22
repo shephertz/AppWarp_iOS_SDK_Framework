@@ -8,5 +8,8 @@
 * Added 3 new callbacks to TurnBasedRoomListener i.e. onStartGameDone, onStopGameDone and onGetMoveHistoryDone.
 
 
+* Added 64-bit framework.
+
+
 
 
