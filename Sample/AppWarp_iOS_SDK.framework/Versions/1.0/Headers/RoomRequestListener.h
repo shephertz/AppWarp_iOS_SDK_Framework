@@ -48,4 +48,18 @@
  * @param event
  */
 -(void)onUpdatePropertyDone:(LiveRoomInfoEvent*)event;
+
+/*
+ * Invoked in response to lock room property to any room.
+ * @param result
+ */
+-(void)onLockPropertiesDone:(Byte)result;
+
+/*
+ * Invoked in response to unlock room property to any room.
+ * @param result
+ */
+-(void)onUnlockPropertiesDone:(Byte)result;
+
+
 @end

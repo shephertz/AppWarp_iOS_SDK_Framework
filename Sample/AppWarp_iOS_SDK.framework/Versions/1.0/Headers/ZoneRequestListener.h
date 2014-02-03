@@ -52,4 +52,5 @@
  * @param event
  */
 -(void)onGetMatchedRoomsDone:(MatchedRoomsEvent*)event;
+
 @end

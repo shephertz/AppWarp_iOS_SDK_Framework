@@ -11,6 +11,7 @@
 #import "LobbyData.h"
 #import "ChatEvent.h"
 #import "UpdateEvent.h"
+#import "MoveEvent.h"
 
 @protocol NotifyListener <NSObject>
 @required
@@ -55,6 +56,13 @@
  * @param event
  */
 -(void)onChatReceived:(ChatEvent*)chatEvent;
+
+/**
+ * Invoked when a joined user sends a chat. Rooms subscribers will receive this.
+ * @param event
+ */
+-(void)onPrivateChatReceived:(NSString*)message fromUser:(NSString*)senderName;
+
 /**
  * Invoked when a joined user sends a updatePeers request. Rooms subscribers 
  * will receive this.
@@ -66,6 +74,43 @@
  * will receive this.
  * @param event
  * @param username
+ * @param properties
+ * @param lockedProperties
  */
--(void)onUserChangeRoomProperty:(RoomData*)event username:(NSString*)username properties:(NSDictionary*)properties;
+-(void)onUserChangeRoomProperty:(RoomData*)event username:(NSString*)username properties:(NSDictionary*)properties lockedProperties:(NSDictionary*)lockedProperties;
+
+/*
+ * Invoked when a user's move is completed in a turn based room
+ */
+-(void)onMoveCompleted:(MoveEvent*) moveEvent;
+
+
+/**
+ * Invoked to indicate that a user has lost connectivity. Subscribers of the users location
+ * will receive this.
+ * @param locid
+ * @param isLobby
+ * @param username
+ */
+-(void)onUserPaused:(NSString*)userName withLocation:(NSString*)locId isLobby:(BOOL)isLobby;
+
+/**
+ * Invoked when a user's connectivity is restored. Subscribers of the users location
+ * will receive this.
+ * @param locid
+ * @param isLobby
+ * @param username
+ */
+-(void)onUserResumed:(NSString*)userName withLocation:(NSString*)locId isLobby:(BOOL)isLobby;
+
+/*
+ * Invoked when a user starts game in a turn based room
+ */
+-(void)onGameStarted:(NSString*)sender roomId:(NSString*)roomId  nextTurn:(NSString*)nextTurn;
+
+/*
+ * Invoked when a user stops game in a turn based room
+ */
+-(void)onGameStopped:(NSString*)sender roomId:(NSString*)roomId;
+
 @end

@@ -16,5 +16,8 @@ static const Byte RESOURCE_MOVED = 3;
 static const Byte BAD_REQUEST = 4;
 static const Byte CONNECTION_ERR = 5;
 static const Byte UNKNOWN_ERROR = 6;
+static const Byte RESULT_SIZE_ERROR = 7;
+static const Byte SUCCESS_RECOVERED = 8;
+static const Byte CONNECTION_ERROR_RECOVERABLE = 9;
 
 #endif

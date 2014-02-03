@@ -24,4 +24,10 @@
  */
 -(void)onDisconnectDone:(ConnectEvent*) event;
 
+/**
+ * Invoked in response to a init UDP request.
+ * @param result
+ */
+-(void)onInitUDPDone:(Byte)result;
+
 @end

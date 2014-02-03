@@ -105,6 +105,7 @@
 -(IBAction)connectButtonAction:(id)sender
 {
     [[WarpClient getInstance] connectWithUserName:nameTextField.text];
+    [nameTextField resignFirstResponder];
 }
 
 

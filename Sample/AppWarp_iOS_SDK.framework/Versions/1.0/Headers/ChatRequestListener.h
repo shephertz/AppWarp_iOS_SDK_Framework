@@ -15,5 +15,6 @@
  * @param result
  */
 -(void)onSendChatDone:(Byte)result;
+-(void)onSendPrivateChatDone:(Byte)result;
 
 @end

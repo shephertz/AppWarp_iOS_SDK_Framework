@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E4A222F5-3E1E-4053-BD77-D05EF0534A9C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AppWarp_iOS_Sample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E205E5A0-A97F-4A2A-A8F6-10396B51B5B5</key>
+		<string>https://github.com/shephertz/AppWarp_iOS_SDK_Framework.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Sample/AppWarp_iOS_Sample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E205E5A0-A97F-4A2A-A8F6-10396B51B5B5</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/shephertz/AppWarp_iOS_SDK_Framework.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E205E5A0-A97F-4A2A-A8F6-10396B51B5B5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E205E5A0-A97F-4A2A-A8F6-10396B51B5B5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AppWarp_iOS_SDK_Framework</string>
+		</dict>
+	</array>
+</dict>
+</plist>

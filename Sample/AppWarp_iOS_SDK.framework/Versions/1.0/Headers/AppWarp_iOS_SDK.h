@@ -20,7 +20,7 @@
 #import <AppWarp_iOS_SDK/NotifyListener.h>
 #import <AppWarp_iOS_SDK/ConnectionRequestListener.h>
 #import <AppWarp_iOS_SDK/ZoneRequestListener.h>
-
+#import <AppWarp_iOS_SDK/TurnBasedRoomListener.h>
 
 #import <AppWarp_iOS_SDK/ConnectionState.h>
 #import <AppWarp_iOS_SDK/WarpResponseResultCode.h>
