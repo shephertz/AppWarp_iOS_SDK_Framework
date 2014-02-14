@@ -154,6 +154,7 @@
     [[WarpClient getInstance] createRoomWithRoomName:roomNameTextField.text roomOwner:roomOwnerTextField.text properties:properties maxUsers:[maxUserTextField.text intValue]];
 
     [createRoomView setHidden:YES];
+    
 }
 
 
