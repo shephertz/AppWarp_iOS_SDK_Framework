@@ -441,4 +441,8 @@
  */
 -(void)getMoveHistory;
 
+
+-(void)setGeo:(NSString*)_geo;
+-(void)setServer:(NSString*)server;
+
 @end

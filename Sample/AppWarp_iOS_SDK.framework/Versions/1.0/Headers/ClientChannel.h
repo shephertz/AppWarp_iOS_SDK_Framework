@@ -31,6 +31,7 @@
 @property (nonatomic, assign) int               sessionId;
 @property (nonatomic, assign) int               waitCounter;
 @property (nonatomic, assign) BOOL              waitingForAck;
+@property (nonatomic, assign) int             countPendingKeepAlive;
 
 
 - (void)initNetworkCommunication;
