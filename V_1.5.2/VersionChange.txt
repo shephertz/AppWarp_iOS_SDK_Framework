@@ -1,0 +1,4 @@
+* LiveRoomInfoEvent properties issues fixed.
+* Reconnect event Add-On.
+
+
