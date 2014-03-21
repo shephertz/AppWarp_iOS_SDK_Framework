@@ -209,6 +209,10 @@
     [[WarpClient getInstance] getAllRooms];
 }
 
+- (IBAction)getLiveRoomInfo:(id)sender {
+    [[WarpClient getInstance] getLiveRoomInfo:roomId];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];

@@ -45,5 +45,6 @@
 -(IBAction)updatePeersButtonAction:(id)sender;
 -(IBAction)createButtonAction:(id)sender;
 -(IBAction)getAllRoomsButtonAction:(id)sender;
+- (IBAction)getLiveRoomInfo:(id)sender;
 
 @end

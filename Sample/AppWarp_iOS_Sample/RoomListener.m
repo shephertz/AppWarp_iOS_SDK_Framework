@@ -93,7 +93,12 @@
 {
     NSString *joinedUsers = @"";
     NSLog(@"joined users array = %@",event.joinedUsers);
-    
+    NSLog(@"Got live info for room id %@", event.roomData.roomId);
+    NSLog(@"joined users=%@",event.joinedUsers);
+    NSLog(@"properties = %@",event.properties);
+    NSLog(@"lockPropeties = %@",event.lockPropeties);
+    NSLog(@"customData = %@",event.customData);
+
     for (int i=0; i<[event.joinedUsers count]; i++)
     {
         joinedUsers = [joinedUsers stringByAppendingString:[event.joinedUsers objectAtIndex:i]];
