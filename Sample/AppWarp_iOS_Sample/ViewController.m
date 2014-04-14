@@ -51,6 +51,8 @@
     
     WarpClient *warpClient = [WarpClient getInstance];
     
+    [warpClient enableTrace:YES];
+    
     ConnectionListener *connectionListener = [[ConnectionListener alloc] initWithHelper:self];
     [warpClient addConnectionRequestListener:connectionListener];
     [connectionListener release];
