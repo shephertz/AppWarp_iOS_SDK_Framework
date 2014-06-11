@@ -98,6 +98,10 @@
     NSLog(@"properties = %@",event.properties);
     NSLog(@"lockPropeties = %@",event.lockPropeties);
     NSLog(@"customData = %@",event.customData);
+    
+    NSDictionary *properties = event.properties;
+    
+    NSLog(@"Properties=%@",properties);
 
     for (int i=0; i<[event.joinedUsers count]; i++)
     {
