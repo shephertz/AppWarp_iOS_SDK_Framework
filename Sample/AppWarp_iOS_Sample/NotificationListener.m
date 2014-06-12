@@ -93,5 +93,39 @@
     
 }
 
+-(void)onMoveCompleted:(MoveEvent *)moveEvent
+{
+    
+}
+
+-(void)onUserChangeRoomProperty:(RoomData *)event username:(NSString *)username properties:(NSDictionary *)properties lockedProperties:(NSDictionary *)lockedProperties
+{
+    
+}
+
+-(void)onUserResumed:(NSString *)userName withLocation:(NSString *)locId isLobby:(BOOL)isLobby
+{
+    
+}
+
+-(void)onUserPaused:(NSString *)userName withLocation:(NSString *)locId isLobby:(BOOL)isLobby
+{
+    
+}
+
+-(void)onGameStarted:(NSString *)sender roomId:(NSString *)roomId nextTurn:(NSString *)nextTurn
+{
+    
+}
+-(void)onGameStopped:(NSString *)sender roomId:(NSString *)roomId
+{
+    
+}
+
+-(void)onPrivateChatReceived:(NSString *)message fromUser:(NSString *)senderName
+{
+    
+}
+
 
 @end

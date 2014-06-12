@@ -60,4 +60,9 @@
     }
 }
 
+-(void)onInitUDPDone:(Byte)result
+{
+    
+}
+
 @end

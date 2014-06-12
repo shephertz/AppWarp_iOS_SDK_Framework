@@ -123,6 +123,12 @@
     [self.view bringSubviewToFront:createRoomView];
 }
 
+-(IBAction)updateRoomProperty:(id)sender
+{
+     NSMutableDictionary *properties=[NSMutableDictionary dictionaryWithObjectsAndKeys:@"Rajeev",@"Name", nil];
+    
+    [[WarpClient getInstance] updateRoom:roomId addProperties:properties removeProperties:nil];
+}
 
 -(IBAction)createButtonAction:(id)sender
 {

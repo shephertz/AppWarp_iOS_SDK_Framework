@@ -120,13 +120,25 @@
 {
     if (event.result == SUCCESS)
     {
-        //[[WarpClient getInstance]unsubscribeRoom:roomEvent.roomData.roomId];
+        NSLog(@"onUpdatePropertyDone Success");
+        NSDictionary *propDict = event.properties;
+        NSLog(@"PropDict=%@",propDict);
     }
     else
     {
-        
+        NSLog(@"onUpdatePropertyDone Failed");
     }
 
+}
+
+-(void)onLockPropertiesDone:(Byte)result
+{
+    
+}
+
+-(void)onUnlockPropertiesDone:(Byte)result
+{
+    
 }
 
 @end

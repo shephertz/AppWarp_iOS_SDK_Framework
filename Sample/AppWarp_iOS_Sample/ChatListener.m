@@ -42,4 +42,9 @@
         [helper updateResponseLabel:[NSString stringWithFormat:@"Error Code=%d",result]];
     }
 }
+
+-(void)onSendPrivateChatDone:(Byte)result
+{
+    
+}
 @end
