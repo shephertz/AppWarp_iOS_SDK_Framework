@@ -88,10 +88,6 @@
     NSLog(@"Data received--- %@",contentObject);
 }
 
--(void)onUserChangeRoomProperty:(RoomData *)event username:(NSString *)username properties:(NSDictionary *)properties
-{
-    
-}
 
 -(void)onMoveCompleted:(MoveEvent *)moveEvent
 {
@@ -100,7 +96,9 @@
 
 -(void)onUserChangeRoomProperty:(RoomData *)event username:(NSString *)username properties:(NSDictionary *)properties lockedProperties:(NSDictionary *)lockedProperties
 {
+    NSLog(@"%s...properties=%@",__FUNCTION__,properties);
     
+    NSLog(@"Type=%@",[properties class]);
 }
 
 -(void)onUserResumed:(NSString *)userName withLocation:(NSString *)locId isLobby:(BOOL)isLobby

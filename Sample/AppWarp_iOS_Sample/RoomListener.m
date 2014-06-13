@@ -127,6 +127,8 @@
     else
     {
         NSLog(@"onUpdatePropertyDone Failed");
+        NSDictionary *propDict = event.properties;
+        NSLog(@"PropDict=%@",propDict);
     }
 
 }
