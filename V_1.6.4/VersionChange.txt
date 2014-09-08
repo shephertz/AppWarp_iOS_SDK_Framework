@@ -1,0 +1,4 @@
+*Added recoverConnectionWithSessionId and getSessionId in WarpClient
+*Added reasonCode in ConnectEvent, will come in onConnectDone with AUTH_ERROR.
+
+
