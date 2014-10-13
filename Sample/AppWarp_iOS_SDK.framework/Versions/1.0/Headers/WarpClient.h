@@ -19,7 +19,6 @@
 @property(nonatomic,retain)NSString *apiKey;
 @property(nonatomic,retain)NSString *secretKey;
 @property(nonatomic,retain)NSString *userName;
-//@property(nonatomic,retain)NSString *warpServerHost;
 
 
 /**
@@ -56,6 +55,7 @@
  *In case of lack of connectivity, the server will fall back to sending updates over TCP for the client. 
  *Sending can continue over UDP irrespective.
  **/
+
 -(void)initUDP;
 
 /**
@@ -78,6 +78,9 @@
  * @return
  */
 -(int)getConnectionState;
+
+-(int)getSessionID;
+
 -(void)onResponse:(WarpResponse*)response;
 -(void)onNotify:(WarpNotifyMessage*)notify;
 -(void)onConnect:(BOOL)value;
@@ -245,6 +248,8 @@
 
 -(void)sendUpdatePeers:(NSData*)update;
 
+-(void)sendPrivateUpdate:(NSData*)update toUser:(NSString*)userName;
+
 /**
  * sends a custom update message to room in which the user is currently joined. The 
  * update is sent using UDP protocol and is unreliable.
@@ -252,7 +257,7 @@
  */
 
 -(void)sendUdpUpdatePeers:(NSData*)update;
-
+-(void)sendUDPPrivateUpdate:(NSData*)update toUser:(NSString*)userName;
 /**
  * add your listener object on which callbacks will be invoked when
  * a response from the server is received for connect, authenticate and
@@ -405,6 +410,12 @@
 -(void) sendMove:(NSString*) moveData;
 
 /*
+ * Sends a move and userName(whose turn is next) to the joined turn based room. Only allowed if its the sender's
+ * turn.
+ */
+-(void) sendMove:(NSString*) moveData nextTurn:(NSString*)nextTurn;
+
+/*
  * Sets the connection recovery time (seconds) allowed that will be negotiated
  * with the server. By default it is 0 so there is no connection recovery.
  */
@@ -416,17 +427,43 @@
  */
 -(void)recoverConnection;
 
+-(void)recoverConnectionWithSessionID:(int)_sessionID forUser:(NSString*)_userName;
 /*
  * Enable or Disable trace to system.out. Default is disabled.
  */
 -(void)enableTrace:(BOOL)isEnable;
 
 /**
- * sends a start game request to the server. Result of the request is
+ * Sends a start game request to the server. Result of the request is
  * provided in the onGameStarted callback of the TurnBasedRoomListener.
  *
  */
 -(void)startGame;
+
+/**
+ * Sends a start game request to the server with instruction that whether the default logic for turn assigment should be enabled or not. Result of the request is
+ * provided in the onGameStarted callback of the TurnBasedRoomListener.
+ * @params isDefaultLogic : set YES if you want default logic otherwise set NO
+ */
+-(void)startGame:(BOOL)isDefaultLogic;
+
+/**
+ * Sends a start game request to the server with instruction that whether the default logic for turn assigment should be enabled or not. Result of the request is
+ * provided in the onGameStarted callback of the TurnBasedRoomListener.
+ *
+ * @params: isDefaultLogic : set YES if you want default logic otherwise set NO
+ * @params: firstTurn : if isDefaultLogic is YES then this contains the userName whose turn is first, send empty string otherwise. 
+ *                      The default is the user who starts the game.
+ */
+-(void)startGame:(BOOL)isDefaultLogic firstTurn:(NSString*)firstTurn;
+
+/**
+ * Sends the user name whose turn is next to the server. Result of the request is
+ * provided in the onSetNextTurnDone callback of the TurnBasedRoomListener.
+ *
+ */
+
+-(void)setNextTurn:(NSString*)nextTurn;
 
 /**
  * sends a stop game request to the server. Result of the request is
@@ -444,5 +481,6 @@
 
 -(void)setGeo:(NSString*)_geo;
 -(void)setServer:(NSString*)server;
+
 
 @end

@@ -14,5 +14,6 @@
  * Gives the result code of the connection request.
  */
 @property Byte result;
+@property Byte reasonCode;
 
 @end

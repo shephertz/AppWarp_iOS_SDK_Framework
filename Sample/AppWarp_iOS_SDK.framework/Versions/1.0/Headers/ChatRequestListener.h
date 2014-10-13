@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol ChatRequestListener <NSObject>
-@required
+@optional
 /**
  * Result of SendChat request. The result value maps to a WarpResponseResultCode
  * @param result

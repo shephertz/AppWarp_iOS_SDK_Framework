@@ -10,8 +10,8 @@
 #import "MoveEvent.h"
 
 @protocol TurnBasedRoomListener <NSObject>
-@required
 
+@optional
 /**
  * Invoked when a response for a sendMove request is received.
  * @param result
@@ -36,4 +36,15 @@
  */
 -(void)onGetMoveHistoryDone:(Byte)result moves:(NSMutableArray*)movesArray;
 
+/**
+ * Invoked when a request from the server is received to set the next turn
+ * @param lastTurn
+ */
+-(void)onNextTurnRequest:(NSString*)lastTurn;
+
+/**
+ * Invoked when a response from the server for setNextTurn request is received
+ * @param result
+ */
+-(void)onSetNextTurnDone:(Byte)result;
 @end

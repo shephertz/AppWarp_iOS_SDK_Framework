@@ -18,6 +18,7 @@
  */
 -(void)onConnectDone:(ConnectEvent*) event;
 
+@optional
 /**
  * Invoked in response to a disconnect request.
  * @param event

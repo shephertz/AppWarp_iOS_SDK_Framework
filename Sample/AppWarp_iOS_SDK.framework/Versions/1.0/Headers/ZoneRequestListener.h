@@ -15,7 +15,7 @@
 
 @protocol ZoneRequestListener <NSObject>
 
-@required
+@optional
 /**
  * Invoked in response to a createRoom request.
  * @param event

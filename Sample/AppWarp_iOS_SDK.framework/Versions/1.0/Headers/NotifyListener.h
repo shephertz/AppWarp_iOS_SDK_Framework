@@ -14,7 +14,7 @@
 #import "MoveEvent.h"
 
 @protocol NotifyListener <NSObject>
-@required
+@optional
 /**
  * Invoked when a room is created. Lobby subscribers will receive this.
  * @param event
@@ -69,6 +69,14 @@
  * @param event
  */
 -(void)onUpdatePeersReceived:(UpdateEvent*)updateEvent;
+
+/**
+ * Invoked when a private update message is received
+ * @param sender
+ * @param update
+ */
+-(void)onPrivateUpdateReceived:(NSString*)sender update:(NSData*)update fromUdp:(BOOL)fromUdp;
+
 /**
  * Invoked when a user change room property. Lobby and the concerned room subscribers
  * will receive this.
@@ -112,5 +120,11 @@
  * Invoked when a user stops game in a turn based room
  */
 -(void)onGameStopped:(NSString*)sender roomId:(NSString*)roomId;
+
+/**
+ * Invoked when a request from the server is received to set the next turn
+ * @param lastTurn
+ */
+-(void)onNextTurnRequest:(NSString*)lastTurn;
 
 @end

@@ -12,7 +12,7 @@
 
 @protocol LobbyRequestListener <NSObject>
 
-@required
+@optional
 /**
  * Invoked in response to a joinLobby request.
  * @param event

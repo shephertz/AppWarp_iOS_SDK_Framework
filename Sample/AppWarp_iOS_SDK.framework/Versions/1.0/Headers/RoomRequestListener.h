@@ -12,7 +12,7 @@
 
 @protocol RoomRequestListener <NSObject>
 
-@required
+@optional
 /**
  * Invoked in response to a subscribeRoom request.
  * @param event

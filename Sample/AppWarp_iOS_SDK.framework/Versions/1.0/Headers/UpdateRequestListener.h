@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @protocol UpdateRequestListener <NSObject>
-@required
+@optional
 /**
  * Result of SendUpdatePeers request. The result value maps to a WarpResponseResultCode
  * @param result
  */
 -(void)onSendUpdatePeersDone:(Byte)result;
+-(void)onSendPrivateUpdateDone:(Byte)result;
 @end

@@ -24,5 +24,6 @@
 
 #import <AppWarp_iOS_SDK/ConnectionState.h>
 #import <AppWarp_iOS_SDK/WarpResponseResultCode.h>
+#import <AppWarp_iOS_SDK/WarpReasonCode.h>
 
 #endif

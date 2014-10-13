@@ -19,5 +19,5 @@ static const Byte UNKNOWN_ERROR = 6;
 static const Byte RESULT_SIZE_ERROR = 7;
 static const Byte SUCCESS_RECOVERED = 8;
 static const Byte CONNECTION_ERROR_RECOVERABLE = 9;
-
+static const Byte USER_PAUSED_ERROR = 10;
 #endif
