@@ -32,38 +32,39 @@
 
 -(void)onRoomCreated:(RoomData*)roomEvent
 {
-    
+    NSLog(@"%s",__func__);
 }
 
 -(void)onRoomDestroyed:(RoomData*)roomEvent
 {
-    
+    NSLog(@"%s",__func__);
 }
 
 -(void)onUserLeftRoom:(RoomData*)roomData username:(NSString*)username
 {
-    
+    NSLog(@"%s..UserName=%@",__func__,username);
 }
 
 -(void)onUserJoinedRoom:(RoomData*)roomData username:(NSString*)username
 {
-    
+    NSLog(@"%s..UserName=%@",__func__,username);
 }
 
 -(void)onUserLeftLobby:(LobbyData*)lobbyData username:(NSString*)username
 {
-    
+    NSLog(@"%s..UserName=%@",__func__,username);
 }
 
 -(void)onUserJoinedLobby:(LobbyData*)lobbyData username:(NSString*)username
 {
-    
+    NSLog(@"%s..UserName=%@",__func__,username);
 }
 
 -(void)onChatReceived:(ChatEvent*)chatEvent
 {
-    
-        
+    NSLog(@"%s",__func__);
+    NSLog(@"Sender: %@",chatEvent.sender);
+    NSLog(@"Message: %@",chatEvent.message);
 }
 
 -(void)onUpdatePeersReceived:(UpdateEvent*)updateEvent
@@ -91,7 +92,7 @@
 
 -(void)onMoveCompleted:(MoveEvent *)moveEvent
 {
-    
+    NSLog(@"%s",__func__);
 }
 
 -(void)onUserChangeRoomProperty:(RoomData *)event username:(NSString *)username properties:(NSDictionary *)properties lockedProperties:(NSDictionary *)lockedProperties
@@ -103,26 +104,26 @@
 
 -(void)onUserResumed:(NSString *)userName withLocation:(NSString *)locId isLobby:(BOOL)isLobby
 {
-    
+    NSLog(@"%s..UserName=%@",__func__,userName);
 }
 
 -(void)onUserPaused:(NSString *)userName withLocation:(NSString *)locId isLobby:(BOOL)isLobby
 {
-    
+    NSLog(@"%s..UserName=%@",__func__,userName);
 }
 
 -(void)onGameStarted:(NSString *)sender roomId:(NSString *)roomId nextTurn:(NSString *)nextTurn
 {
-    
+    NSLog(@"%s",__func__);
 }
 -(void)onGameStopped:(NSString *)sender roomId:(NSString *)roomId
 {
-    
+    NSLog(@"%s",__func__);
 }
 
 -(void)onPrivateChatReceived:(NSString *)message fromUser:(NSString *)senderName
 {
-    
+    NSLog(@"%s",__func__);
 }
 
 

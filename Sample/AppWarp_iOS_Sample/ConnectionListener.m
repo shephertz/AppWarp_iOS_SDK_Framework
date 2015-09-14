@@ -32,16 +32,39 @@
 
 -(void)onConnectDone:(ConnectEvent*) event
 {
-    NSLog(@"%s......%d",__FUNCTION__,event.result);
+    NSLog(@"%s......ResultCode = %d",__FUNCTION__,event.result);
     if (event.result==SUCCESS)
     {
         [helper updateResponseLabel:@"Connection Done"];
+    }
+    else if (event.result==AUTH_ERROR)
+    {
+        [helper updateResponseLabel:@"AuthError"];
+    }
+    else if (event.result==CONNECTION_ERR)
+    {
+        [helper updateResponseLabel:@"CONNECTION_ERR"];
+    }
+    else if (event.result==CONNECTION_ERROR_RECOVERABLE)
+    {
+        [helper updateResponseLabel:@"CONNECTION_ERROR_RECOVERABLE"];
+    }
+    else if (event.result==SUCCESS_RECOVERED)
+    {
+        [helper updateResponseLabel:@"SUCCESS_RECOVERED"];
+    }
+    else if (event.result==BAD_REQUEST)
+    {
+        [helper updateResponseLabel:@"BAD_REQUEST"];
+    }
+    else if (event.result==USER_PAUSED_ERROR)
+    {
+        [helper updateResponseLabel:@"USER_PAUSED_ERROR"];
     }
     else
     {
         [helper updateResponseLabel:[NSString stringWithFormat:@"Connection Failed with error code = %d",event.result]];
         NSLog(@"connection failed");
-        
     }
 }
 

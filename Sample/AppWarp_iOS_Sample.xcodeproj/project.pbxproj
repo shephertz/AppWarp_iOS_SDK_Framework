@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8490335719EBABD700B31AA6 /* AppWarp_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8490335619EBABD700B31AA6 /* AppWarp_iOS_SDK.framework */; };
+		5DFB7F611B6788FD0024C7E3 /* AppWarp_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFB7F601B6788FD0024C7E3 /* AppWarp_iOS_SDK.framework */; };
 		D764CA0E174CD32E00596923 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D764CA0D174CD32E00596923 /* UIKit.framework */; };
 		D764CA10174CD32E00596923 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D764CA0F174CD32E00596923 /* Foundation.framework */; };
 		D764CA12174CD32E00596923 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D764CA11174CD32E00596923 /* CoreGraphics.framework */; };
@@ -29,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8490335619EBABD700B31AA6 /* AppWarp_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppWarp_iOS_SDK.framework; sourceTree = "<group>"; };
+		5DFB7F601B6788FD0024C7E3 /* AppWarp_iOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppWarp_iOS_SDK.framework; sourceTree = "<group>"; };
 		D764CA0A174CD32E00596923 /* AppWarp_iOS_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppWarp_iOS_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D764CA0D174CD32E00596923 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D764CA0F174CD32E00596923 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -69,7 +69,7 @@
 				D764CA0E174CD32E00596923 /* UIKit.framework in Frameworks */,
 				D764CA10174CD32E00596923 /* Foundation.framework in Frameworks */,
 				D764CA12174CD32E00596923 /* CoreGraphics.framework in Frameworks */,
-				8490335719EBABD700B31AA6 /* AppWarp_iOS_SDK.framework in Frameworks */,
+				5DFB7F611B6788FD0024C7E3 /* AppWarp_iOS_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +96,7 @@
 		D764CA0C174CD32E00596923 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8490335619EBABD700B31AA6 /* AppWarp_iOS_SDK.framework */,
+				5DFB7F601B6788FD0024C7E3 /* AppWarp_iOS_SDK.framework */,
 				D764CA0D174CD32E00596923 /* UIKit.framework */,
 				D764CA0F174CD32E00596923 /* Foundation.framework */,
 				D764CA11174CD32E00596923 /* CoreGraphics.framework */,
