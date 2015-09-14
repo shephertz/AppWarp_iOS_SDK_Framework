@@ -1,4 +1,0 @@
-* Bug Fixes : Fixed the properties type issue in the onUserChangeRoomProperty callback of  
-              NotifyListener.
-
-

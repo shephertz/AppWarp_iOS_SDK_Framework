@@ -1,4 +1,0 @@
-* setGeo method added to WarpClient to connect with desired location of AppWarp Server 
-* setServer method added to WarpClient
-
-
