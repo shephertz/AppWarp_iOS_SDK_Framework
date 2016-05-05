@@ -1,0 +1,8 @@
+*  Added following new APIs and their corresponding listeners to WarpClient:
+- getUserStatus
+- getOnlineUsersCount
+- getAllRoomsCount
+- joinAndSubscribeRoom
+- leaveAndUnsubscribeRoom
+- getRoomInRangeWithProperties
+
