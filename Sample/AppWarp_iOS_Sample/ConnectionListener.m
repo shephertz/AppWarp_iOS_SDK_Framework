@@ -9,6 +9,14 @@
 #import "ConnectionListener.h"
 #import "ViewController.h"
 
+@interface ConnectionListener ()
+{
+    NSTimer *timer;
+    float timeElapsed;
+}
+
+@end
+
 @implementation ConnectionListener
 @synthesize helper;
 
@@ -36,6 +44,7 @@
     if (event.result==SUCCESS)
     {
         [helper updateResponseLabel:@"Connection Done"];
+        [[WarpClient getInstance] initUDP];
     }
     else if (event.result==AUTH_ERROR)
     {
@@ -48,10 +57,12 @@
     else if (event.result==CONNECTION_ERROR_RECOVERABLE)
     {
         [helper updateResponseLabel:@"CONNECTION_ERROR_RECOVERABLE"];
+        [self startTimer];
     }
     else if (event.result==SUCCESS_RECOVERED)
     {
         [helper updateResponseLabel:@"SUCCESS_RECOVERED"];
+        [self stopTimer];
     }
     else if (event.result==BAD_REQUEST)
     {
@@ -66,6 +77,28 @@
         [helper updateResponseLabel:[NSString stringWithFormat:@"Connection Failed with error code = %d",event.result]];
         NSLog(@"connection failed");
     }
+}
+
+-(void)startTimer
+{
+    if (!timer) {
+        timeElapsed = 0;
+        timer = [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(updateTime:) userInfo:nil repeats:YES];
+    }
+}
+
+-(void)stopTimer
+{
+    if (timer) {
+        [timer invalidate];
+        timer = nil;
+    }
+}
+
+-(void)updateTime:(NSTimer*)l_timer
+{
+    timeElapsed = timeElapsed + l_timer.timeInterval;
+    NSLog(@"Timer : %f",timeElapsed);
 }
 
 
@@ -85,7 +118,7 @@
 
 -(void)onInitUDPDone:(Byte)result
 {
-    
+    NSLog(@"On onInitUDPDone invoked = %d",result);
 }
 
 @end

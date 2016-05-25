@@ -52,6 +52,8 @@
     WarpClient *warpClient = [WarpClient getInstance];
     
     [warpClient enableTrace:YES];
+    //[warpClient setGeo:@"us"];
+    [warpClient setRecoveryAllowance:60];
     
     ConnectionListener *connectionListener = [[ConnectionListener alloc] initWithHelper:self];
     [warpClient addConnectionRequestListener:connectionListener];
@@ -113,7 +115,8 @@
 
 -(IBAction)disConnectButtonAction:(id)sender
 {
-    [[WarpClient getInstance] disconnect];
+    //[[WarpClient getInstance] disconnect];
+    [[WarpClient getInstance] recoverConnection];
 }
 
 
@@ -168,6 +171,7 @@
 
 -(IBAction)joinRoomButtonAction:(id)sender
 {
+    NSLog(@"%s",__func__);
     [[WarpClient getInstance] joinRoom:roomId];
 }
 
